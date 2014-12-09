@@ -7,12 +7,14 @@
 #include "phonemic.h"
 #include <sifteo/asset.h>
 #include "assets.gen.h"
-//#include <iostream>
+
 using namespace Sifteo;
  
 #define LAST_LEVEL 0 //24
-
-int word_num;
+#define FILE_LENGTH 100
+#define SPLIT_LENGTH 25
+int word_num, temp;
+int order[MAX_WORD_SIZE];
  
 Random gRandom;
  
@@ -33,6 +35,12 @@ void Phonemic::title()
 
 }
 
+void resetOrder()
+{
+	temp = 0;
+	for(int i=0; i<MAX_WORD_SIZE; i++)
+		order[i] = -1;
+}
 
 /**
   * Initializes the Phonemic app
@@ -64,6 +72,7 @@ void Phonemic::init()
   */
 void Phonemic::nextWord()
 {
+	resetOrder(); 	/* reset cube solution order */
     // Advance the word (and level)
 	word++;
 	if(word >= 8) {
@@ -77,27 +86,38 @@ void Phonemic::nextWord()
 	
 	word_num = (level * 8) + word;
 	
-	//cout << word << level << word_num << endl;
-
     // Test for game over
     // TODO: check for end-of-game
-    int length = 0;
-    while(length < MAX_WORD_SIZE && wordFamilies[level].words[word][length] != -1)
+    int length = wordFamilies->length[word];
+	/* deprecated, added word length to wordfamily struct */
+    /*while(length < MAX_WORD_SIZE && wordFamilies[level].words[word][length] != -1)
         length++;
-        
+     */   
 	int i = 0;
 	for(CubeID cube: CubeSet::connected())
 	{
         // Reverse the order of the cubes every other word
+		// change this to random rather than reverse, and should have same functionality as proto-type
+		// TO DO
         int j = i;
         if(word % 2 == 0) j = length - i - 1;
 		if(i < length) {
-			cubes[cube].symbol = wordFamilies[level].words[word][j];
-            cubes[cube].images[0] = pairs[wordFamilies[level].words[word][j]].grapheme[0]; 
-            cubes[cube].images[1] = pairs[wordFamilies[level].words[word][j]].grapheme[1]; 
-			cubes[cube].vid.bg0.image(vec(0,0), *cubes[cube].images[0]);
-			cubes[cube].sound = pairs[wordFamilies[level].words[word][j]].phoneme; 
+				/*	OLD
+				cubes[cube].symbol = wordFamilies[level].words[word][j];
+				cubes[cube].images[0] = pairs[wordFamilies[level].words[word][j]].grapheme[0]; 
+				cubes[cube].images[1] = pairs[wordFamilies[level].words[word][j]].grapheme[1]; 
+				cubes[cube].vid.bg0.image(vec(0,0), *cubes[cube].images[0]);
+				cubes[cube].sound = pairs[wordFamilies[level].words[word][j]].phoneme; */
+			/* NEW */
+			order[temp] = j;			/* track solution sequence */
+			cubes[cube].symbol = j;		/* used to compare for solution sequence */
+			/* TO DO */
+			cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,14), vec(16,2))); /* temp - can be taken out? */
+			cubes[cube].vid.bg1.text(vec(0,14), Font, wordFamilies[level].grapheme[word][j]);	/* get draw to work properly?? */
+			//cubes[cube].sound = wordFamilies[level].phoneme[word]]0];		/* attach sound??? */
+			System::paint();	/* is this neccesary? */
 		} else {
+			/* kept this the same, shouldn't require any changes */
 			cubes[cube].symbol = -1;
             cubes[cube].images[0] = &Sleep;
             cubes[cube].images[1] = &Smile;
@@ -107,11 +127,11 @@ void Phonemic::nextWord()
 		i++;
 		
 		// Allocate 16x2 tiles on BG1 for text at the bottom of the screen
-        cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,14), vec(16,2)));
-		//text.set(0, -20);
-            //textTarget = text;
-			cubes[cube].vid.bg1.text(vec(0,14), Font, " Hello traveler ");
-		//System::paint();
+        // cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,14), vec(16,2)));
+		// text.set(0, -20);
+            // textTarget = text;
+			// cubes[cube].vid.bg1.text(vec(0,14), Font, " Hello traveler ");
+		// System::paint();
 		
 	}
 	state = PLAY;
@@ -125,8 +145,9 @@ void Phonemic::allSmiles() {
     for(CubeID cube: CubeSet::connected())
 	{
         cubes[cube].vid.bg0.image(vec(0,0), Smile/*word_pictures[word_num]*/);
-		//cubes[cube].vid.bg0.image(vec(0,0), Cat);
-	//cubes[cube].vid.bg0.image(vec(0,0), Smile);
+		
+		/* TO DO */
+		//cubes[cube].vid.bg0.image(vec(0,0), wordFamilies[level].words[word]);  /* attach to word.png */
     }
 }
 
@@ -214,12 +235,12 @@ void Phonemic::checkForWord(unsigned id) {
     // Check for a match
 	bool match = true;
     for(int i = 0; i < MAX_WORD_SIZE; i++) {
-        if(wordFamilies[level].words[word][i] != wordAttempt[i]) 
+        if(order[i] != wordAttempt[i]) 
         {
             match = false;
             break;
         }
-        if(wordFamilies[level].words[word][i] == -1) break;
+        if(order[i] == -1) break;
     }
     
     // Recognize match

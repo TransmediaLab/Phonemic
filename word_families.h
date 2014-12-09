@@ -1,9 +1,10 @@
 #ifndef _WORD_FAMILIES_
 #define _WORD_FAMILIES_
 
-#include "phonemes.h"
-#include "graphemes.h"
-#include "chunks.h"
+#include <sifteo/string.h>
+//#include "phonemes.h"
+//#include "graphemes.h"
+//#include "chunks.h"
  
 const int MAX_WORD_SIZE = 5;
 const int MAX_CHUNK_SIZE = 2;
@@ -18,7 +19,10 @@ struct WordFamilyCube {
 };
 
 struct WordFamily {
-    const int words[8][MAX_WORD_SIZE];
+    const char *words[8];
+	const int length[8];
+	const char *grapheme[8][MAX_WORD_SIZE];
+	const char *phoneme[8][MAX_WORD_SIZE];
 };
  
 #endif
