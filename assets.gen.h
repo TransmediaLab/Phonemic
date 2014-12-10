@@ -6,13 +6,10 @@
 
 #pragma once
 
-extern Sifteo::AssetGroup IconAssets;
-extern const Sifteo::AssetImage Icon;
-extern const Sifteo::PinnedAssetImage Font;
 extern Sifteo::AssetGroup BootstrapAssets;
-extern const Sifteo::PinnedAssetImage Highlight;
-extern const Sifteo::AssetImage Smile;
 extern const Sifteo::AssetImage Sleep;
+extern const Sifteo::AssetImage Smile;
+extern const Sifteo::PinnedAssetImage Highlight;
 extern const Sifteo::AssetImage ChunkImage_apple;
 extern const Sifteo::AssetImage ChunkImage_back;
 extern const Sifteo::AssetImage ChunkImage_ball;
@@ -21,6 +18,9 @@ extern const Sifteo::AssetImage ChunkImage_bed;
 extern const Sifteo::AssetImage ChunkImage_bell;
 extern const Sifteo::AssetImage ChunkImage_bird;
 extern const Sifteo::AssetImage ChunkImage_car;
+extern Sifteo::AssetGroup IconAssets;
+extern const Sifteo::AssetImage Icon;
+extern const Sifteo::PinnedAssetImage Font;
 extern const Sifteo::AssetImage ChunkImage_id[2];
 extern const Sifteo::AssetImage ChunkImage_un[2];
 extern const Sifteo::AssetImage ChunkImage_ip[2];

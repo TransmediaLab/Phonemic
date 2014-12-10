@@ -22,7 +22,7 @@ struct WordFamily {
     const char *words[8];
 	const int length[8];
 	const char *grapheme[8][MAX_WORD_SIZE];
-	const char *phoneme[8][MAX_WORD_SIZE];
+	const int phoneme[8][MAX_WORD_SIZE];
 };
  
 #endif

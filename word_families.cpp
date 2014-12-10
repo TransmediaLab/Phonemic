@@ -2,6 +2,7 @@
 #include <sifteo.h>
 #include "phonemic.h"
 #include "word_families.h"
+#include "phonemes.h"
 
 WordFamily wordFamilies[] = {
       /*{{
@@ -30,36 +31,37 @@ WordFamily wordFamilies[] = {
 	/* can write quick script to create this structure from our original dictionary format */
    {/* Level 0 */
 		{	/*word*/
-			"cat",
-			"and",
-			"away",
-			"big",
-			"blue",
-			"can",
-			"come",
-			"down",
+			"apple",
+			"back",
+			"ball",
+			"bear",
+			"bed",
+			"bell",
+			"bird",
+			"car",
 		},
 		{	/*word length*/
-			3,3,4,3,4,3,4,4
+			5,4,4,4,3,4,4,3
 		},
 		{	/*grapheme*/
-			{"c","a","t"},
-			{"a","n","d"},
-			{"a","w","ay"},
-			{"b","i","g"},
-			{"b","i","g"},
-			{"c","a","n"},
-			{"c","o","me"},
+			{"a","pp","le"},
+			{"b","a","ck"},
+			{"b","a","ll"},
+			{"b","ea","r"},
+			{"b","e","d"},
+			{"b","e","ll"},
+			{"b","ir","d"},
+			{"c","a","r"},
 		},
 		{	/*phoneme*/
-			{"c","a","t"},
-			{"a","n","d"},
-			{"u","w","a_"},
-			{"b","i","g"},
-			{"b","l","u_"},
-			{"k","a","n"},
-			{"k","u","m"},
-			{"d","ow","n"},
+			{PHON(a),PHON(p),PHON(l)},
+			{PHON(b),PHON(a),PHON(k)},
+			{PHON(b),PHON(o),PHON(l)},
+			{PHON(b),PHON(e),PHON(r)},
+			{PHON(b),PHON(e),PHON(d)},
+			{PHON(b),PHON(e),PHON(l)},
+			{PHON(b),PHON(r),PHON(d)},
+			{PHON(k),PHON(o),PHON(r)},
 		},
 	},
 

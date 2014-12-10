@@ -114,7 +114,7 @@ void Phonemic::nextWord()
 			/* TO DO */
 			cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,14), vec(16,2))); /* temp - can be taken out? */
 			cubes[cube].vid.bg1.text(vec(0,14), Font, wordFamilies[level].grapheme[word][j]);	/* get draw to work properly?? */
-			//cubes[cube].sound = wordFamilies[level].phoneme[word]]0];		/* attach sound??? */
+			cubes[cube].sound = phonemeSounds[wordFamilies[level].phoneme[word][j]].phoneme;		/* attach sound??? */
 			System::paint();	/* is this neccesary? */
 		} else {
 			/* kept this the same, shouldn't require any changes */

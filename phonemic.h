@@ -8,7 +8,7 @@
 #include <sifteo.h>
 #include <sifteo/string.h>
 #include "assets.gen.h"
-#include "pairings.h"
+#include "phonemes.h"
 #include "word_families.h"
 #include "word_pictures.h"
 #include "word_sounds.h"
@@ -16,7 +16,7 @@
 using namespace Sifteo;
  
 extern AssetSlot MainSlot;
-extern PhonemeGraphemePair pairs[];
+extern PhonemeSounds phonemeSounds[];
 extern WordFamily wordFamilies[];
 
 enum PhonemicState {
