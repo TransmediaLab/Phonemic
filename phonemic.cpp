@@ -107,10 +107,10 @@ void Phonemic::nextWord()
 		i++;
 		
 		// Allocate 16x2 tiles on BG1 for text at the bottom of the screen
-        cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,14), vec(16,2)));
+       // cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,14), vec(16,2)));
 		//text.set(0, -20);
             //textTarget = text;
-			cubes[cube].vid.bg1.text(vec(0,14), Font, " Hello traveler ");
+			//cubes[cube].vid.bg1.text(vec(0,14), Font, " Hello traveler ");
 		//System::paint();
 		
 	}

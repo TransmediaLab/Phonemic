@@ -1,9 +1,5 @@
 #ifndef _WORD_FAMILIES_
 #define _WORD_FAMILIES_
-
-#include "phonemes.h"
-#include "graphemes.h"
-#include "chunks.h"
  
 const int MAX_WORD_SIZE = 5;
 const int MAX_CHUNK_SIZE = 2;

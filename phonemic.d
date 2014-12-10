@@ -35,8 +35,7 @@ phonemic.o: phonemic.cpp U:\641\sifteo-sdk\/include\sifteo.h \
   U:\641\sifteo-sdk\/include\sifteo/video/bg1.h \
   U:\641\sifteo-sdk\/include\sifteo/video/bg2.h \
   U:\641\sifteo-sdk\/include\sifteo/video/tilebuffer.h phonemic.h \
-  assets.gen.h pairings.h word_families.h phonemes.h graphemes.h \
-  chunks.h word_pictures.h word_sounds.h
+  assets.gen.h pairings.h word_families.h word_pictures.h word_sounds.h
 
 U:\641\sifteo-sdk\/include\sifteo.h:
 
@@ -119,12 +118,6 @@ assets.gen.h:
 pairings.h:
 
 word_families.h:
-
-phonemes.h:
-
-graphemes.h:
-
-chunks.h:
 
 word_pictures.h:
 
