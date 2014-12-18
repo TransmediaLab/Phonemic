@@ -6,7 +6,7 @@
 #include <sifteo/audio.h>
 #include "phonemic.h"
  
-#define LAST_LEVEL 0 //24
+#define LAST_LEVEL 1 //24
 #define FILE_LENGTH 100
 #define SPLIT_LENGTH 25
 

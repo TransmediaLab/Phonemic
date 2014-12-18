@@ -63,6 +63,12 @@ Phoneme_ch = sound{"assets/phonemes/ch.wav"}
 Phoneme_wh = sound{"assets/phonemes/wh.wav"}
 Phoneme_kw = sound{"assets/phonemes/kw.wav"}
 
+Phoneme_aa = sound{"assets/phonemes/a_long.wav"}
+Phoneme_ee = sound{"assets/phonemes/e_long.wav"}
+Phoneme_ii = sound{"assets/phonemes/i_long.wav"}
+Phoneme_oo = sound{"assets/phonemes/o_long.wav"}
+Phoneme_uu = sound{"assets/phonemes/u_long.wav"}
+
 -- Chunk Sounds
 ChunkSound_ab = sound{"assets/phonemes/ab.wav"}
 ChunkSound_ad = sound{"assets/phonemes/ad.wav"}
@@ -90,24 +96,25 @@ ChunkSound_ug = sound{"assets/phonemes/ug.wav"}
 ChunkSound_um = sound{"assets/phonemes/um.wav"}
 ChunkSound_un = sound{"assets/phonemes/un.wav"}
 
+WordAssets = group{ quality=9.9 }
 
 -- Word images
 ChunkImage_apple = image{"assets/dolch_pics/apple.png"}
---ChunkImage_baby = image{"assets/dolch_pics/baby.png"}
+ChunkImage_baby = image{"assets/dolch_pics/baby.png"}
 ChunkImage_back = image{"assets/dolch_pics/back.png"}
 ChunkImage_ball = image{"assets/dolch_pics/ball.png"}
 ChunkImage_bear = image{"assets/dolch_pics/bear.png"}
 ChunkImage_bed = image{"assets/dolch_pics/bed.png"}
 ChunkImage_bell = image{"assets/dolch_pics/bell.png"}
 ChunkImage_bird = image{"assets/dolch_pics/bird.png"}
---ChunkImage_boat = image{"assets/dolch_pics/boat.png"}
---ChunkImage_box = image{"assets/dolch_pics/box.png"}
---ChunkImage_boy = image{"assets/dolch_pics/boy.png"}
---ChunkImage_bread = image{"assets/dolch_pics/bread.png"}
---ChunkImage_cake = image{"assets/dolch_pics/cake.png"}
+ChunkImage_boat = image{"assets/dolch_pics/boat.png"}
+ChunkImage_box = image{"assets/dolch_pics/box.png"}
+ChunkImage_boy = image{"assets/dolch_pics/boy.png"}
+ChunkImage_bread = image{"assets/dolch_pics/bread.png"}
+ChunkImage_cake = image{"assets/dolch_pics/cake.png"}
 ChunkImage_car = image{"assets/dolch_pics/car.png"}
---ChunkImage_cat = image{"assets/dolch_pics/cat.png"}
---ChunkImage_chair = image{"assets/dolch_pics/chair.png"}
+ChunkImage_cat = image{"assets/dolch_pics/cat.png"}
+ChunkImage_chair = image{"assets/dolch_pics/chair.png"}
 --ChunkImage_chicken = image{"assets/dolch_pics/chicken.png"}
 --ChunkImage_coat = image{"assets/dolch_pics/coat.png"}
 --ChunkImage_corn = image{"assets/dolch_pics/corn.png"}
