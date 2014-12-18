@@ -13,6 +13,12 @@
 	
 AssetSlot gMainSlot = AssetSlot::allocate()
     .bootstrap(BootstrapAssets);
+AssetSlot gWord1 = AssetSlot::allocate()
+    .bootstrap(WordAssets);
+AssetSlot gWord2 = AssetSlot::allocate()
+    .bootstrap(WordAssets2);
+AssetSlot gWord3 = AssetSlot::allocate()
+    .bootstrap(WordAssets3);
 	
 // NEED A MENU:
 //  + Word Families

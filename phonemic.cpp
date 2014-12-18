@@ -6,7 +6,7 @@
 #include <sifteo/audio.h>
 #include "phonemic.h"
  
-#define LAST_LEVEL 1 //24
+#define LAST_LEVEL 6 //24
 #define FILE_LENGTH 100
 #define SPLIT_LENGTH 25
 
@@ -58,7 +58,8 @@ void Phonemic::init()
 		i++;
 	}
 		
-	level = gRandom.randint(0, LAST_LEVEL-1);
+	//level = gRandom.randint(0, LAST_LEVEL-1);
+	level = 0;
 	word = -1;
 	nextWord();
 }
@@ -85,11 +86,24 @@ void Phonemic::nextWord()
 	
     // Test for game over
     // TODO: check for end-of-game
-    length = wordFamilies->length[word];
+    length = wordFamilies[level].length[word];
 	/* deprecated, added word length to wordfamily struct */
     /*while(length < MAX_WORD_SIZE && wordFamilies[level].words[word][length] != -1)
         length++;
      */   
+	 
+	while (length > 3) {
+		word++;
+		if(word >= 8) {
+			level++;
+			word = 0;
+		}
+		if(level > LAST_LEVEL) {
+			level = 0;
+			word = 0;
+		}
+		length = wordFamilies[level].length[word];
+	}
 	 
 	int i = 0;
 	int r = 0;
