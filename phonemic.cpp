@@ -132,9 +132,9 @@ void Phonemic::nextWord()
 			//order[temp] = j;			/* track solution sequence */
 			//cubes[cube].symbol = j;		/* used to compare for solution sequence */
 			/* TO DO */
-			cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,5), vec(16,6))); /* temp - can be taken out? */
-			cubes[cube].vid.bg1.text(vec(0,5), Font2, "        ");
-			cubes[cube].vid.bg1.text(vec(6,5), Font2, wordFamilies[level].graphemes[word][j[i]]);	/* get draw to work properly?? */
+			cubes[cube].vid.bg1.setMask(BG1Mask::filled(vec(0,4), vec(16,8))); /* temp - can be taken out? */
+			cubes[cube].vid.bg1.text(vec(0,4), Font2, "        ");
+			cubes[cube].vid.bg1.text(vec(4,4), Font2, wordFamilies[level].graphemes[word][j[i]]);	/* get draw to work properly?? */
 			//cubes[cube].sound = phonemes[wordFamilies[level].phoneme[word][j]].phoneme;		/* attach sound??? */
 			//System::paint();	/* is this neccesary? */
 		} else {

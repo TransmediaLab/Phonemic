@@ -9,8 +9,11 @@ IconAssets = group{ quality=9.95 }
 Icon = image{ "assets/phonemic.png" }
 
 
+
+
+
 BootstrapAssets = group{ quality=9.9 }
-Font2 = image{"assets/font-16x32.png", pinned=true, width=24, height=48}
+Font2 = image{"assets/font-32x64.png", pinned=true, width=32, height=64}
 --Smile = image{ "assets/smile.png" }
 Background = image{ "assets/background.png", quality=10}
 --Sleep = image{ "assets/sleep.png" }
@@ -32,18 +35,27 @@ ChunkImage_back = image{"assets/dolch_pics/back.png"}
 ChunkImage_ball = image{"assets/dolch_pics/ball.png"}
 ChunkImage_bear = image{"assets/dolch_pics/bear.png"}
 ChunkImage_bed = image{"assets/dolch_pics/bed.png"}
+
+WordAssets = group{ quality=9.9 }
+
 ChunkImage_bell = image{"assets/dolch_pics/bell.png"}
 ChunkImage_bird = image{"assets/dolch_pics/bird.png"}
 ChunkImage_boat = image{"assets/dolch_pics/boat.png"}
+
+
+
+
 ChunkImage_box = image{"assets/dolch_pics/box.png"}
 ChunkImage_boy = image{"assets/dolch_pics/boy.png"}
 ChunkImage_bread = image{"assets/dolch_pics/bread.png"}
 ChunkImage_cake = image{"assets/dolch_pics/cake.png"}
+
+
 ChunkImage_car = image{"assets/dolch_pics/car.png"}
 ChunkImage_cat = image{"assets/dolch_pics/cat.png"}
 ChunkImage_chair = image{"assets/dolch_pics/chair.png"}
 
-WordAssets = group{ quality=9.9 }
+
 
 Font2a = image{"assets/font-16x32.png", pinned=true, width=24, height=48}
 --Smile = image{ "assets/smile.png" }
@@ -59,6 +71,9 @@ ChunkImage_dog = image{"assets/dolch_pics/dog.png"}
 ChunkImage_doll = image{"assets/dolch_pics/doll.png"}
 ChunkImage_door = image{"assets/dolch_pics/door.png"}
 ChunkImage_duck = image{"assets/dolch_pics/duck.png"}
+
+WordAssets2 = group{ quality=9.9 }
+
 ChunkImage_egg = image{"assets/dolch_pics/egg.png"}
 ChunkImage_eye = image{"assets/dolch_pics/eye.png"}
 ChunkImage_farm = image{"assets/dolch_pics/farm.png"}
@@ -66,7 +81,7 @@ ChunkImage_feet = image{"assets/dolch_pics/feet.png"}
 ChunkImage_fire = image{"assets/dolch_pics/fire.png"}
 ChunkImage_fish = image{"assets/dolch_pics/fish.png"}
 
-WordAssets2 = group{ quality=9.9 }
+
 
 Font2b = image{"assets/font-16x32.png", pinned=true, width=24, height=48}
 --Smile = image{ "assets/smile.png" }
@@ -85,13 +100,16 @@ ChunkImage_home = image{"assets/dolch_pics/home.png"}
 ChunkImage_horse = image{"assets/dolch_pics/horse.png"}
 ChunkImage_milk = image{"assets/dolch_pics/milk.png"}
 ChunkImage_money = image{"assets/dolch_pics/money.png"}
+
+WordAssets3 = group{ quality=9.9 }
+
 ChunkImage_nest = image{"assets/dolch_pics/nest.png"}
 ChunkImage_paper = image{"assets/dolch_pics/paper.png"}
 ChunkImage_pig = image{"assets/dolch_pics/pig.png"}
 ChunkImage_rabbit = image{"assets/dolch_pics/rabbit.png"}
 ChunkImage_rain = image{"assets/dolch_pics/rain.png"}
 
-WordAssets3 = group{ quality=9.9 }
+
 
 Font2c = image{"assets/font-16x32.png", pinned=true, width=24, height=48}
 --Smile = image{ "assets/smile.png" }
